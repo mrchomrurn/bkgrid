@@ -1,7 +1,7 @@
 {
   "name": "bk-grid",
   "private": false,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "main": "./dist/vue3-bk-grid.umd.cjs",
   "module": "./dist/vue3-bk-grid.js",
