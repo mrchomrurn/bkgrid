@@ -60,6 +60,7 @@ const fetchData = async () => {
     :row-data="data"
     pagination
     :excel-styles="excelStyles"
+    :key="data.length"
   ></BkGrid>
 </template>
 
