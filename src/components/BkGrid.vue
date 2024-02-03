@@ -10,6 +10,8 @@ import { ColDef, GridOptions } from "ag-grid-community";
 import "ag-grid-community/styles//ag-grid.css";
 import "ag-grid-community/styles//ag-theme-quartz.css";
 import { AgGridVue } from "ag-grid-vue3";
+// @ts-ignore
+import _ from "../type/grid.ts";
 
 type DeprecatedProps =
   | "enterMovesDown"

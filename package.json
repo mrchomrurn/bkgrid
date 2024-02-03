@@ -1,15 +1,15 @@
 {
   "name": "bk-grid",
   "private": false,
-  "version": "1.0.5",
+  "version": "1.0.6",
   "type": "module",
   "main": "./dist/vue3-bk-grid.umd.cjs",
+  "types": "./dist/index.d.ts",
   "module": "./dist/vue3-bk-grid.js",
   "files": [
     "dist",
     "src/components/"
   ],
-  "types": "./dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mrchomrurn/bkgrid.git"
