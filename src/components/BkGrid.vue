@@ -27,16 +27,17 @@ type DeprecatedProps =
   | "onColumnValueChangeRequest"
   | "onColumnAggFuncChangeRequest";
 
-interface Props extends Omit<GridOptions<TData>, DeprecatedProps> {}
-
-const props = withDefaults(defineProps<Props>(), {
-  // @ts-ignore
-  defaultColDef: {
-    editable: true,
-    sortable: true,
-    filter: true,
-  } as ColDef,
-});
+const props = withDefaults(
+  defineProps<Omit<GridOptions<TData>, DeprecatedProps>>(),
+  {
+    // @ts-ignore
+    defaultColDef: {
+      editable: true,
+      sortable: true,
+      filter: true,
+    } as ColDef,
+  }
+);
 </script>
 
 <style scoped></style>
