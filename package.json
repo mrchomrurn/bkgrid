@@ -1,20 +1,41 @@
 {
   "name": "bk-grid",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "1.0.0",
   "type": "module",
+  "main": "./dist/vue3-bk-grid.umd.cjs",
+  "module": "./dist/vue3-bk-grid.js",
   "files": [
     "dist",
     "src/components/"
   ],
+  "types": "./dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mrchomrurn/bkgrid.git"
   },
+  "exports": {
+    ".": {
+      "import": "./dist/vue3-bk-grid.js",
+      "require": "./dist/vue3-bk-grid.umd.cjs"
+    },
+    "./dist/style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
+    }
+  },
+  "keywords": [
+    "datagrid",
+    "grid",
+    "vuegrid"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview"
+  },
+  "peerDependencies": {
+    "vue": "^3.3.11"
   },
   "dependencies": {
     "ag-grid-community": "^31.0.3",
