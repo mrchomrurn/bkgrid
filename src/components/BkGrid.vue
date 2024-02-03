@@ -1,28 +1,42 @@
 <template>
   <AgGridVue
-    style="width: 100%; height: 100vh"
-    class="ag-theme-quartz"
-    :columnDefs="columnDefs"
-    :rowData="data"
-    :defaultColDef="props.defaultColumnDefs"
+    class="ag-theme-quartz bk__grid-wrapper"
+    :gridOptions="props"
   ></AgGridVue>
 </template>
 
 <script setup lang="ts" generic="TData">
-import { ColDef } from "ag-grid-community";
+import { ColDef, GridOptions } from "ag-grid-community";
 import "ag-grid-community/styles//ag-grid.css";
 import "ag-grid-community/styles//ag-theme-quartz.css";
 import { AgGridVue } from "ag-grid-vue3";
-import { toRef } from "vue";
 
-const props = defineProps<{
-  defaultColumnDefs?: ColDef;
-  columns: ColDef[];
-  data: TData[];
-}>();
+type DeprecatedProps =
+  | "enterMovesDown"
+  | "enterMovesDownAfterEdit"
+  | "excludeHiddenColumnsFromQuickFilter"
+  | "enableChartToolPanelsButton"
+  | "suppressParentsInRowNodes"
+  | "suppressAsyncEvents"
+  | "suppressAggAtRootLevel"
+  | "serverSideFilterAllLevels"
+  | "functionsPassive"
+  | "advancedFilterModel"
+  | "onColumnRowGroupChangeRequest"
+  | "onColumnPivotChangeRequest"
+  | "onColumnValueChangeRequest"
+  | "onColumnAggFuncChangeRequest";
 
-const columnDefs = toRef(props, "columns");
-const data = toRef(props, "data");
+interface Props extends Omit<GridOptions<TData>, DeprecatedProps> {}
+
+const props = withDefaults(defineProps<Props>(), {
+  // @ts-ignore
+  defaultColDef: {
+    editable: true,
+    sortable: true,
+    filter: true,
+  } as ColDef,
+});
 </script>
 
 <style scoped></style>
