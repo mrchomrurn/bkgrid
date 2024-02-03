@@ -7,6 +7,10 @@
     "dist",
     "src/components/"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrchomrurn/bkgrid.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
