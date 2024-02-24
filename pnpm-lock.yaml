@@ -6,11 +6,11 @@ settings:
 
 dependencies:
   ag-grid-community:
-    specifier: ^31.0.3
-    version: 31.0.3
+    specifier: ^31.1.1
+    version: 31.1.1
   ag-grid-vue3:
-    specifier: ^31.0.3
-    version: 31.0.3(vue@3.4.15)
+    specifier: ^31.1.1
+    version: 31.1.1(vue@3.4.15)
   vue:
     specifier: ^3.3.11
     version: 3.4.15(typescript@5.3.3)
@@ -589,16 +589,16 @@ packages:
   /@vue/shared@3.4.15:
     resolution: {integrity: sha512-KzfPTxVaWfB+eGcGdbSf4CWdaXcGDqckoeXUh7SB3fZdEtzPCK2Vq9B/lRRL3yutax/LWITz+SwvgyOxz5V75g==}
 
-  /ag-grid-community@31.0.3:
-    resolution: {integrity: sha512-k81YmLaOQOab9BavYD+Pw2smZSl6TXOJqj9hRuf70XQl3EknOHCGcra7joJxZRJLMKE/HdR+u33TNyX4TCuWfg==}
+  /ag-grid-community@31.1.1:
+    resolution: {integrity: sha512-tiQZ7VQ07yJScTMIQpaYoUMPgiyXMwYDcwTxe4riRrcYGTg0e258XEihoPUZFejR60P1fYWMxdJaR2JUnyhGrg==}
     dev: false
 
-  /ag-grid-vue3@31.0.3(vue@3.4.15):
-    resolution: {integrity: sha512-04ANl6lfH5/0bqIYecK31EaA/kNSID483EM+KYHb4oq/WmgAR9EGZEJZWiCwWZlyyUYjsOxnHzN68Idp9lgXNg==}
+  /ag-grid-vue3@31.1.1(vue@3.4.15):
+    resolution: {integrity: sha512-GjR4/6JUWQ0VsdmcxSN5ks1vH+wB7lLjX1CbskPqNfD69/fb9l7Eg2oGAgqNJo8b87W87jzhg9RguOx5bDpsZQ==}
     peerDependencies:
       vue: ^3.0.0
     dependencies:
-      ag-grid-community: 31.0.3
+      ag-grid-community: 31.1.1
       vue: 3.4.15(typescript@5.3.3)
     dev: false
 
