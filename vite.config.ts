@@ -2,14 +2,13 @@ import vue from "@vitejs/plugin-vue";
 import path from "path";
 import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
-import libCss from "vite-plugin-libcss";
 
 // https://vitejs.dev/config/
 export default defineConfig({
   define: {
     __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: 'true',
   },
-  plugins: [vue(), dts(), libCss()],
+  plugins: [vue(), dts()],
   build: {
     lib: {
       entry: path.resolve(__dirname, "src/index.ts"),
@@ -24,8 +23,6 @@ export default defineConfig({
         },
       },
     },
-    cssMinify: true,
-    cssCodeSplit: true,
   },
   resolve: {
     alias: {
