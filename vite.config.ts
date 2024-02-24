@@ -2,10 +2,11 @@ import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import dts from "vite-plugin-dts";
 import path from "path";
+import libCss from "vite-plugin-libcss";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), dts()],
+  plugins: [vue(), dts(), libCss()],
   build: {
     lib: {
       entry: path.resolve(__dirname, "src/index.ts"),
@@ -20,6 +21,8 @@ export default defineConfig({
         },
       },
     },
+    cssMinify: true,
+    cssCodeSplit: true,
   },
   resolve: {
     alias: {

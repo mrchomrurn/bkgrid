@@ -12,7 +12,7 @@ dependencies:
     specifier: ^31.0.3
     version: 31.0.3(vue@3.4.15)
   vue:
-    specifier: ^3.0.0
+    specifier: ^3.3.11
     version: 3.4.15(typescript@5.3.3)
 
 devDependencies:
@@ -26,11 +26,14 @@ devDependencies:
     specifier: ^5.2.2
     version: 5.3.3
   vite:
-    specifier: ^5.0.0
+    specifier: ^5.0.8
     version: 5.0.12
   vite-plugin-dts:
     specifier: ^3.7.2
     version: 3.7.2(typescript@5.3.3)(vite@5.0.12)
+  vite-plugin-libcss:
+    specifier: ^1.1.1
+    version: 1.1.1(vite@5.0.12)
   vue-tsc:
     specifier: ^1.8.25
     version: 1.8.27(typescript@5.3.3)
@@ -989,6 +992,15 @@ packages:
       - '@types/node'
       - rollup
       - supports-color
+    dev: true
+
+  /vite-plugin-libcss@1.1.1(vite@5.0.12):
+    resolution: {integrity: sha512-WAk6U9iYWMbcu7cdw4wACpVebZiLHMyyE9KTcBzzkTt1cnXj3a7loIoIGNblx+xMb9quPpO3iRbNTOnIFDzgmg==}
+    peerDependencies:
+      vite: '*'
+    dependencies:
+      minimatch: 9.0.3
+      vite: 5.0.12
     dev: true
 
   /vite@5.0.12:
